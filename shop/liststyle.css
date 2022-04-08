@@ -1,0 +1,64 @@
+
+.left-sidebar h2, .brands_products h2 {
+  color: #db7753;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 auto 30px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+
+.category-products .panel-default .panel-heading .panel-title a {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 39px;
+}
+
+span.caret{margin-top: 18px;margin-left: 20px;}
+
+.panel-body li a {
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left:35px;
+  padding-right: 25px;
+}
+
+.brands-name .nav-stacked li a {
+  color: #696763;
+  font-size: 12px;
+  padding: 5px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.genre-name .nav-stacked li a {
+  color: #696763;
+  font-size: 12px;
+  padding: 5px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-weight: 700;
+}
+.category-name .nav-stacked li a {
+  color: #696763;
+  font-size: 12px;
+  padding: 5px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+

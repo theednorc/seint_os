@@ -1,0 +1,290 @@
+<?php include('header.php'); ?>
+<!--
+Navigation Bar Section 
+-->
+<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <div class="nav-collapse">
+			<ul class="nav">
+			  <li class=""><a href="index.php">Home</a></li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			  <li class=""><a href="new-products.php">What's New</a></li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			  <li class="active"><a href="list-view.php">List View</a></li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			  <li class=""><a href="top-sellers.php">Best selling</a></li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			  <li class=""><a href="specials.php">Special Events</a></li>
+			  <li class="">&nbsp;&nbsp;&nbsp;</li>
+			</ul>
+			<form action="result.php" method="get" class="navbar-search pull-left">
+                <input type="search" name="s" placeholder="Search" class="search-query span2">
+            </form>
+			<ul class="nav pull-right">
+
+				<li class=""><a href="feedback.php"><span class="icon-comments"></span>&nbsp;Feedbacks</a></li>
+				<li class="">&nbsp;&nbsp;&nbsp;</li>
+				<li class="">&nbsp;&nbsp;&nbsp;</li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+</div>
+<!-- 
+Body Section 
+-->
+<div class="row">
+
+<?php include('sidebar.php'); ?>
+
+<div class="span9">
+	<div class="well well-small">
+		<h3>Short Pants Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=8 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>Shirts Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=9 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>Sweaters Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=10 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>Tops Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=11 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>Dress Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=12 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>Hair Click Here</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,category WHERE product.Status='InStock' AND product.cateid=category.cateid AND category.cateid=27 ORDER BY RAND()limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>For Women</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,gen WHERE product.Status='InStock' AND product.genid=gen.genid AND gen.genid=3 ORDER BY RAND() limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>For Men</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,gen WHERE product.Status='InStock' AND product.genid=gen.genid AND gen.genid=2 ORDER BY RAND() limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+
+	<div class="well well-small">
+		<h3>For Babies</h3>
+		<hr class="soften"/>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<?php
+          $sql = $mysqli->query("SELECT product.* FROM product,gen WHERE product.Status='InStock' AND product.genid=gen.genid AND gen.genid=1 ORDER BY RAND() limit 4");
+          if($sql){
+              while($obj = $sql->fetch_object()) : 
+				echo'<li class="span3">
+					<div class="thumbnail">
+					<a class="zoomTool" href="product_details.php?product='.$obj->productid.'" style="width:50px;top:80%;margin-left:-20px;"><span class="icon-zoom-in"></span></a>
+						<img src="../admin/imageforadmin/'.$obj->image.'" alt="">
+					</div>
+				</li>';
+				endwhile;
+				/*echo'<a class="expand" href="#"><span class="icon-expand-alt"></span></a>';*/
+          }?>
+			</ul>	
+			
+			<hr class="soften"/>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- 
+Clients 
+-->
+<?php include('section.php'); ?>
+<!--
+Footer
+-->
+<?php include('footer.php'); ?>
+
+</div><!-- /container -->
+
+<div class="copyright">
+<div class="container">
+	<span>COPYRIGHT &copy; <?php echo date("Y") ?> <br> Seint<sup class="tm">TM</sup> All Rights Reserved Online Shop </span>
+</div>
+</div>
+<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+    <script src="assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="assets/js/shop.js"></script>
+  </body>
+</html>
